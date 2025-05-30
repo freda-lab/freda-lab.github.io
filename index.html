@@ -5,50 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Freda Appiagyei | Portfolio</title>
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #222;
-      height: 100%;
-      width: 100%;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #2f2f2f;
+      color: white;
+    }
+    .topnav {
+      background: #444;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 40px 40px;
+    }
+    .topnav h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .nav-links a:hover {
+      color: orange;
     }
     .hero {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
-      text-align: center;
       padding: 4rem 2rem;
-      min-height: 100vh;
-      box-sizing: border-box;
+      background: linear-gradient(to right, #fefdfb 50%, #2f2f2f 50%);
+      height: 100vh;
     }
     .hero img {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-right: 4rem;
     }
-    .hero h1 {
+    .hero-content {
+      max-width: 600px;
+    }
+    .hero-content h2 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
     }
-    .hero h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
-      color: #555;
-      max-width: 700px;
+    .highlight {
+      color: orange;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    .hero-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #444;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid white;
+    }
+    .button:hover {
+      background: orange;
+      border-color: orange;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid orange;
+      display: inline-block;
+    }
+    .project, .about, .contact {
+      margin-bottom: 3rem;
     }
   </style>
 </head>
 <body>
-  <section class="hero">
-    <img src="lab-testing.png" alt="Freda at Cornell ECE wall">
+  <header class="topnav">
     <h1>Freda Appiagyei</h1>
-    <h2>Graduate student at Cornell University specializing in microrobotic systems and low-power analog IC design.</h2>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <img src="cornell-wall.png" alt="Freda at Cornell">
+    <div class="hero-content">
+      <h2>Freda Appiagyei</h2>
+      <p class="highlight">Cornell University | Analog/Mixed-Signal Circuit Designer</p>
+      <p>I’m Freda, a graduate student at Cornell specializing in microrobotic systems and low-power analog IC design. I love combining engineering and creativity to build meaningful technology.</p>
+      <a href="#contact" class="button">Contact Me</a>
+    </div>
+  </section>
+  <section id="about" class="about">
+    <h3>About Me</h3>
+    <p>[Write a short paragraph about your background, academic journey, and interests.]</p>
+  </section>
+  <section id="projects" class="project">
+    <h3>Projects</h3>
+    <p>[List or describe key projects like your dual-slope ADC, bio-inspired algorithms, or others.]</p>
+  </section>
+  <section id="contact" class="contact">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:fa324@cornell.edu" style="color:orange;">fa324@cornell.edu</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/freda-appiagyei-b08aa11a2/" target="_blank" style="color:orange;">Freda Appiagyei</a></p>
   </section>
 </body>
 </html>
