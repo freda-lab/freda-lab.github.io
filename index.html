@@ -14,6 +14,9 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #1e1e1e;
       color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     .topnav {
       background: #2b2b2b;
@@ -22,6 +25,7 @@
       justify-content: space-between;
       align-items: center;
       border-radius: 0 0 40px 40px;
+      flex-wrap: wrap;
     }
     .topnav h1 {
       font-size: 1.2rem;
@@ -30,6 +34,7 @@
     .nav-links {
       display: flex;
       gap: 2rem;
+      flex-wrap: wrap;
     }
     .nav-links a {
       text-decoration: none;
@@ -40,9 +45,17 @@
       color: orange;
     }
     .hero {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #1e1e1e;
+    }
+    @media(min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
     }
     .hero-image {
       background: #ffffff;
@@ -51,6 +64,7 @@
       justify-content: center;
       flex-direction: column;
       padding: 2rem;
+      flex: 1;
     }
     .hero-image img {
       width: 100%;
@@ -64,9 +78,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      flex: 1;
     }
     .hero-content h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 800;
       margin-bottom: 1rem;
     }
@@ -106,22 +121,27 @@
       border-bottom: 2px solid orange;
       display: inline-block;
     }
-    .project, .about, .contact {
+    .project, .about {
       margin-bottom: 3rem;
     }
+    .footer {
+      margin-top: auto;
+      background: #2b2b2b;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 40px 40px 0 0;
+    }
     .icon-link {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.75rem;
+      display: inline-block;
+      margin: 0 1rem;
     }
     .icon-link img {
-      width: 24px;
-      height: 24px;
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s;
     }
-    .icon-link a {
-      color: orange;
-      text-decoration: none;
+    .icon-link img:hover {
+      transform: scale(1.2);
     }
   </style>
 </head>
@@ -153,7 +173,7 @@
   <section id="projects" class="project">
     <h3>Projects</h3>
     <p>[List or describe key projects like your dual-slope ADC, bio-inspired algorithms, or others.]</p>
- </section>
+  </section>
   <footer class="footer" id="contact">
     <a class="icon-link" href="mailto:fa324@cornell.edu">
       <img src="email-icon.png" alt="Email icon">
@@ -164,4 +184,3 @@
   </footer>
 </body>
 </html>
-
