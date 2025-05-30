@@ -68,16 +68,23 @@
     .about-images {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 2rem;
       justify-content: center;
+      align-items: flex-start;
+    }
+    .about-images > div {
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
     }
     .about-images img {
-      max-width: 300px;
+      width: 100%;
       border-radius: 10px;
     }
     .about-images p {
-      text-align: center;
+      margin-top: 0.5rem;
       font-size: 0.9rem;
+      color: #444;
     }
     .projects ul {
       list-style: disc;
@@ -108,7 +115,7 @@
   </header>
 
   <section class="hero">
-    <img src="cornell-wall.png" alt="Freda at Cornell">
+    <img src="hero-lab.png" alt="Freda in the lab">
     <h2>Freda Appiagyei</h2>
     <h3>Analog/Mixed-Signal Circuit Designer</h3>
     <p>Graduate student at Cornell University, specializing in microrobotic systems and low-power analog IC design.</p>
@@ -152,3 +159,4 @@
   </footer>
 </body>
 </html>
+
