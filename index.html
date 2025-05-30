@@ -4,165 +4,141 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Freda Appiagyei | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 1rem 0.5rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    nav ul {
-      list-style: none;
       display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 0;
-      flex-wrap: wrap;
+      min-height: 100vh;
+      background: #faf9f6;
     }
-    nav a {
+    .sidebar {
+      width: 250px;
+      background: #f2f0ec;
+      padding: 2rem 1rem;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    }
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    .sidebar h1 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0 0 1.5rem;
+    }
+    .sidebar nav a {
+      display: block;
+      margin: 0.5rem 0;
       text-decoration: none;
       color: #333;
     }
-    .hero {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .hero img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .hero h2 {
-      margin-top: 1rem;
-      font-size: 2rem;
-    }
-    .hero h3 {
-      color: #666;
-      font-weight: normal;
-    }
-    .hero p {
-      max-width: 750px;
-      margin: 1rem auto 0;
+    .sidebar section {
+      margin-top: 2rem;
+      font-size: 0.9rem;
       color: #444;
-      font-size: 1.1rem;
+      text-align: center;
+    }
+    .main {
+      flex: 1;
+      padding: 2rem;
     }
     .section {
-      padding: 3rem 1rem;
-      max-width: 1100px;
-      margin: auto;
+      margin-bottom: 3rem;
     }
     .section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
     }
-    .about-images {
+    .about-content, .project-item {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      align-items: flex-start;
+      align-items: center;
+      gap: 1.5rem;
     }
-    .about-images > div {
-      flex: 1 1 350px;
-      max-width: 420px;
-      text-align: center;
-    }
-    .about-images img {
-      width: 100%;
+    .about-content img, .project-item img {
+      width: 250px;
       border-radius: 10px;
     }
-    .about-images p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: #444;
+    .project-item {
+      margin-bottom: 2rem;
     }
-    .projects ul {
-      list-style: disc;
-      padding-left: 2rem;
-    }
-    .projects li {
-      margin-bottom: 1.2rem;
-      font-size: 1.05rem;
-      line-height: 1.5;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background: #f5f5f5;
-      color: #555;
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        box-shadow: none;
+        text-align: center;
+      }
+      .main {
+        padding: 1rem;
+      }
+      .about-content, .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
+  <div class="sidebar">
+    <img src="hero-lab.png" alt="Freda Appiagyei" />
     <h1>Freda Appiagyei</h1>
     <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </header>
+    <section>
+      <p>Email:<br> <a href="mailto:fa324@cornell.edu">fa324@cornell.edu</a></p>
+    </section>
+  </div>
 
-  <section class="hero">
-    <img src="lab-testing.png" alt="Freda in the lab">
-    <h2>Freda Appiagyei</h2>
-    <h3>Analog/Mixed-Signal Circuit Designer</h3>
-    <p>Graduate student at Cornell University, specializing in microrobotic systems and low-power analog IC design.</p>
-  </section>
-
-  <section class="section" id="about">
-    <h2>About Me</h2>
-    <div class="about-images">
-      <div>
-        <img src="cornell-wall.png" alt="Graduate student at Cornell University">
-        <p>Graduate student at Cornell University</p>
+  <div class="main">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="cornell-wall.png" alt="At Cornell">
+        <p>Graduate student at Cornell University, specializing in microrobotic systems and low-power analog IC design.</p>
       </div>
-      <div>
-        <img src="engineer-action.png" alt="Working in the lab">
-        <p>Working in the lab</p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-item">
+        <div>
+          <h3>Dual-Slope ADC for Microrobots</h3>
+          <p>Designed and tested a 5-bit ADC for thermal gradient sensing.</p>
+        </div>
+        <img src="engineer-action.png" alt="In the lab">
       </div>
-    </div>
-  </section>
+      <div class="project-item">
+        <div>
+          <h3>Bio-inspired Navigation Algorithms</h3>
+          <p>Researched pathfinding methods for autonomous microrobots.</p>
+        </div>
+      </div>
+    </section>
 
-  <section class="section projects" id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Dual-Slope ADC for Microrobots</strong> – Designed and tested a 5-bit ADC for thermal gradient sensing.</li>
-      <li><strong>Bio-inspired Navigation Algorithms</strong> – Researched pathfinding methods for autonomous microrobots.</li>
-    </ul>
-  </section>
+    <section id="resume" class="section">
+      <h2>Resume</h2>
+      <p><a href="resume.pdf" target="_blank">View My Resume (PDF)</a></p>
+    </section>
 
-  <section class="section" id="resume">
-    <h2>Resume</h2>
-    <p style="text-align: center;"><a href="resume.pdf" target="_blank">View my resume (PDF)</a></p>
-  </section>
-
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p style="text-align: center;">Email: <a href="mailto:fa324@cornell.edu">fa324@cornell.edu</a></p>
-    <p style="text-align: center;">LinkedIn: <a href="https://www.linkedin.com/in/freda-appiagyei-b08aa11a2/" target="_blank">linkedin.com/in/freda-appiagyei-b08aa11a2</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Freda Appiagyei</p>
-  </footer>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:fa324@cornell.edu">fa324@cornell.edu</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/freda-appiagyei-b08aa11a2/" target="_blank">linkedin.com/in/freda-appiagyei-b08aa11a2</a></p>
+    </section>
+  </div>
 </body>
 </html>
+
 
 
